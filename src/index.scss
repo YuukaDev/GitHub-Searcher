@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  input {
+    width: 20em;
+    padding: 10px;
+  }
+
+  ::placeholder {
+
+  }
+}
+
+.card {
+  margin-top: 20px;
+  width: 800px;
+  background-color: gray;
+
+  .data-container {
+    text-align: center;
+
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
