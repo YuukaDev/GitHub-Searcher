@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 5px;
+  width: 150px;
+}
+
+button {
+  margin-left: 8em;
+  margin-top: 10px;
+  display: block;
+}
+
+.data-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dark {
+  background-color: #000000;
+  color: #fff;
+}
