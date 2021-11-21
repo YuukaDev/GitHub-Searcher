@@ -14,9 +14,10 @@ form {
           flex-direction: column;
 }
 
-form input {
+.flex input {
   width: 20em;
   padding: 10px;
+  margin-right: 10px;
 }
 
 .card {
