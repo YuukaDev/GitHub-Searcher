@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Navigation() {
+function Form() {
   const a = null;
   const [base, setBase] = useState({
     name: "",
@@ -75,4 +75,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Form;
