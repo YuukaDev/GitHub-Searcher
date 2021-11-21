@@ -10,7 +10,7 @@ function Form() {
     followers: 0,
     following: 0,
     twitter: "",
-    repos: 0
+    repos: 0,
   });
   const [img, setImg] = useState();
   const getUser = async (username) => {
@@ -25,7 +25,7 @@ function Form() {
         followers: `Followers - ${random.followers}`,
         following: `Following - ${random.following}`,
         twitter: `Twitter - ${random.twitter_username}`,
-        repos: `Repos - ${random.public_repos}`
+        repos: `Repos - ${random.public_repos}`,
       });
       setImg(random.avatar_url);
       console.log(random);
@@ -40,7 +40,7 @@ function Form() {
     <div className="container">
       <button
         onToggle={() => {
-          document.body.classList.add("dark")
+          document.body.classList.add("dark");
         }}
         className="dark-mode"
       >
