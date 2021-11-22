@@ -10,6 +10,7 @@ function Form() {
   };
   const [base, setBase] = useState({
     name: "",
+    login: "",
     bio: "",
     company: "",
     location: "",
@@ -26,8 +27,9 @@ function Form() {
       const url = await fetch(`https://api.github.com/users/${username}`);
       const random = await url.json();
       setBase({
-        name: `Name - ${random.login}`,
-        bio: ` Biography - ${random.bio}`,
+        name: `${handleNull(random.name, base.name)}`,
+        login: `@${random.login}`,
+        bio: ` ${random.bio}`,
         company: ` ${handleNull(random.company, base.company)}`,
         location: ` ${handleNull(random.location, base.location)}`,
         website: ` ${random.blog}`,
@@ -68,13 +70,18 @@ function Form() {
         </div>
         <div className="card ">
           <div className="data-container">
-            <img className="m-3 rounded-circle" src={img} alt="logo" />
-            <p>{base.name}</p>
-            <p>{base.bio}</p>
-            <p>
-              <i className="fas fa-envelope"></i>
-              {base.email}
-            </p>
+            <div className="data-header">
+              <img className="m-3 rounded-circle" src={img} alt="logo" />
+              <div className="profile-name">
+                <p>{base.name}</p>
+                <p>{base.login}</p>
+                <p>{base.bio}</p>
+                <p>
+                  <i className="fas fa-envelope"></i>
+                  {base.email}
+                </p>
+              </div>
+            </div>
             <div className="profile-stats-container">
               <div className="profile-stat">
                 <p>Repos</p>
@@ -89,22 +96,26 @@ function Form() {
                 <p>{base.following}</p>
               </div>
             </div>
-            <p>
-              <i className="fas fa-map-marker-alt"></i>
-              {base.location}
-            </p>
-            <p>
-              <i className="fab fa-twitter"></i>
-              {base.twitter}
-            </p>
-            <p>
-              <i className="fas fa-link"></i>
-              {base.website}
-            </p>
-            <p>
-              <i className="fas fa-building"></i>
-              {base.company}
-            </p>
+            <div className="container">
+              <div className="row row-cols-2">
+                <p className="col">
+                  <i className="fas fa-map-marker-alt"></i>
+                  {base.location}
+                </p>
+                <p className="col">
+                  <i className="fab fa-twitter"></i>
+                  {base.twitter}
+                </p>
+                <p className="col">
+                  <i className="fas fa-link"></i>
+                  {base.website}
+                </p>
+                <p className="col">
+                  <i className="fas fa-building"></i>
+                  {base.company}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </form>
