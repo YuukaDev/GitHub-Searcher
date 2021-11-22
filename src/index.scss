@@ -3,6 +3,7 @@ $pinkColor: #fca6d1;
 $bgColor: #1b1d36;
 $blueColor: #99d6ea;
 $yellowColor: #fffb85;
+$cardColor: #1e2a47;
 
 body {
   margin: 0;
@@ -51,9 +52,9 @@ form {
 .card {
   margin-top: 20px;
   width: 800px;
-  border: 5px solid $bgColor;
-  background-color: transparent;
+  background-color: $cardColor;
   color: $yellowColor;
+  border-radius: 64px;
 
   .data-container {
     text-align: center;
@@ -71,13 +72,36 @@ form {
 
     .profile-stat {
       display: flex;
+      padding: 10px;
+      margin: 5px auto;
       flex-direction: column;
       justify-content: space-evenly;
     }
 
     img {
-      width: 250px;
-      height: 250px;
+      display: flex;
+      margin: 20px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .data-header {
+      display: flex;
+      flex-direction: row;
+      margin: 15px 5%;
+    }
+
+    .profile-name {
+      text-align: left;
+    }
+
+    .container {
+      display: flex;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      margin-left: 18%;
+      padding: 10px;
     }
   }
 }
