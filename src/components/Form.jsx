@@ -65,9 +65,6 @@ function Form() {
             id="usernameInput"
             placeholder="Enter a username..."
           />
-          <button className="btn btn-outline-danger" type="submit">
-            Submit
-          </button>
         </div>
         <div className="card ">
           <div className="data-container">
