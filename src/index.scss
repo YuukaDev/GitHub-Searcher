@@ -1,8 +1,20 @@
+// Variables
+$pink: rgb(252, 166, 209);
+$bgColor: rgb(27, 29, 54);
+$borderColor: rgb(153, 214, 234);
+$cardColor: red;
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #34495e;
+  background-color: $bgColor;
+}
+
+.display-1 {
+  margin-top: 50px;
+  font-weight: 600;
+  color: $pink;
 }
 
 form {
@@ -15,16 +27,19 @@ form {
 .flex {
   input {
     width: 20em;
+    margin: 20px auto;
     padding: 10px;
     margin-right: 10px;
+    border: 2px solid $borderColor;
+    background-color: transparent;
   }
 }
 
 .card {
   margin-top: 20px;
   width: 800px;
-  background-color: #264653;
-  color: #fff;
+  background-color: #191919;
+  color: $pink;
 
   .data-container {
     text-align: center;
