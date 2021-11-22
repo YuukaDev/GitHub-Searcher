@@ -29,19 +29,45 @@ form {
 }
 
 .flex input {
-  width: 20em;
+  background: url("./images/search.png");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: 15px;
+  background-size: 25px;
+  outline: none;
+  padding: 12px;
+  width: 500px;
+  padding-left: 45px;
+  border-radius: 64px;
   margin: 20px auto;
-  padding: 10px;
   margin-right: 10px;
   border: 2px solid #99d6ea;
   background-color: transparent;
+  color: #99d6ea;
+}
+
+.flex ::-webkit-input-placeholder {
+  color: #99d6ea;
+}
+
+.flex :-ms-input-placeholder {
+  color: #99d6ea;
+}
+
+.flex ::-ms-input-placeholder {
+  color: #99d6ea;
+}
+
+.flex ::placeholder {
+  color: #99d6ea;
 }
 
 .card {
   margin-top: 20px;
   width: 800px;
-  background-color: #191919;
-  color: #fca6d1;
+  border: 5px solid #1b1d36;
+  background-color: transparent;
+  color: #fffb85;
 }
 
 .card .data-container {
