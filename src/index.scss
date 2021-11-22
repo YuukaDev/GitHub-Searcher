@@ -1,8 +1,8 @@
 // Variables
-$pink: rgb(252, 166, 209);
-$bgColor: rgb(27, 29, 54);
-$borderColor: rgb(153, 214, 234);
-$cardColor: red;
+$pinkColor: #fca6d1;
+$bgColor: #1b1d36;
+$blueColor: #99d6ea;
+$yellowColor: #fffb85;
 
 body {
   margin: 0;
@@ -14,7 +14,7 @@ body {
 .display-1 {
   margin-top: 50px;
   font-weight: 600;
-  color: $pink;
+  color: $pinkColor;
 }
 
 form {
@@ -26,20 +26,34 @@ form {
 
 .flex {
   input {
-    width: 20em;
+    background: url("./images/search.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: 15px;
+    background-size: 25px;
+    outline: none;
+    padding: 12px;
+    width: 500px;
+    padding-left: 45px;
+    border-radius: 64px;
     margin: 20px auto;
-    padding: 10px;
     margin-right: 10px;
-    border: 2px solid $borderColor;
+    border: 2px solid $blueColor;
     background-color: transparent;
+    color: $blueColor;
+  }
+
+  ::placeholder {
+    color: $blueColor;
   }
 }
 
 .card {
   margin-top: 20px;
   width: 800px;
-  background-color: #191919;
-  color: $pink;
+  border: 5px solid $bgColor;
+  background-color: transparent;
+  color: $yellowColor;
 
   .data-container {
     text-align: center;
