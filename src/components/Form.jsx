@@ -47,7 +47,7 @@ function Form() {
   };
   useEffect(() => {
     getUser("YuukaDev");
-  },);
+  }, []);
   return (
     <div className="container-fluid">
       <form
