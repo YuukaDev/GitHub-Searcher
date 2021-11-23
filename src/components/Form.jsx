@@ -8,7 +8,6 @@ function Form() {
       return `${a}`;
     }
   };
-  const [error, setError] = useState("Not Found");
   const [base, setBase] = useState({
     name: "",
     login: "",
@@ -42,16 +41,13 @@ function Form() {
       });
       setImg(random.avatar_url);
       console.log(random);
-      if (base.name == undefined) {
-        alert("Not founded");
-      }
     } catch {
       alert("There was something wrong");
     }
   };
   useEffect(() => {
     getUser("YuukaDev");
-  }, []);
+  },);
   return (
     <div className="container-fluid">
       <form
