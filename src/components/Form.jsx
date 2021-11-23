@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function Form() {
   const handleNull = (a) => {
@@ -45,9 +45,6 @@ function Form() {
       alert("There was something wrong");
     }
   };
-  useEffect(() => {
-    getUser("YuukaDev");
-  }, []);
   return (
     <div className="container-fluid">
       <form
