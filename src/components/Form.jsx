@@ -37,12 +37,12 @@ function Form() {
         email: ` ${handleNull(random.email, base.email)}`,
         followers: `${random.followers}`,
         following: `${random.following}`,
-        twitter: ` ${random.twitter_username}`,
+        twitter: ` ${handleNull(random.twitter_username, base.twitter)}`,
         repos: `${random.public_repos}`,
       });
       setImg(random.avatar_url);
       console.log(random);
-      if(base === undefined) {
+      if (base.name == undefined) {
         alert("Not founded");
       }
     } catch {
@@ -60,10 +60,8 @@ function Form() {
           const username = e.target.elements.usernameInput.value;
           if (!username) {
             return alert("Please enter username");
-          } else if (username === undefined) {
-            return alert("User not founded");
           } else {
-            getUser(username);
+            return getUser(username);
           }
         }}
       >
