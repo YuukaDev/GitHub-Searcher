@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #1b1d36;
+}
+
+.display-1 {
+  margin-top: 50px;
+  font-weight: 600;
+  color: #fca6d1;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex input {
+  background: url("./images/search.png");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: 15px;
+  background-size: 25px;
+  outline: none;
+  padding: 12px;
+  width: 500px;
+  padding-left: 45px;
+  border-radius: 64px;
+  margin: 20px auto;
+  margin-right: 10px;
+  border: 2px solid #99d6ea;
+  background-color: transparent;
+  color: #99d6ea;
+}
+
+.flex ::-webkit-input-placeholder {
+  color: #99d6ea;
+}
+
+.flex :-ms-input-placeholder {
+  color: #99d6ea;
+}
+
+.flex ::-ms-input-placeholder {
+  color: #99d6ea;
+}
+
+.flex ::placeholder {
+  color: #99d6ea;
+}
+
+.card {
+  margin-top: 20px;
+  width: 800px;
+  background-color: #1e2a47;
+  color: #fffb85;
+  border-radius: 64px;
+}
+
+.card .data-container {
+  text-align: center;
+}
+
+.card .data-container .profile-stats-container {
+  width: 500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #141d2f;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card .data-container .profile-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  margin: 5px auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card .data-container img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.card .data-container .data-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 15px 5%;
+}
+
+.card .data-container .profile-name {
+  text-align: left;
+}
+
+.card .data-container .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-left: 18%;
+  margin-top: 15px;
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */
