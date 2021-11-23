@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 function Form() {
-  const handleNull = (param1) => {
-    if (param1 === "" || param1 === null) {
+  const handleNull = (a) => {
+    if (a === "" || a === null) {
       return "None";
     } else {
-      return `${param1}`;
+      return `${a}`;
     }
   };
+  const [error, setError] = useState("Not Found");
   const [base, setBase] = useState({
     name: "",
     login: "",
@@ -41,6 +42,9 @@ function Form() {
       });
       setImg(random.avatar_url);
       console.log(random);
+      if(base === undefined) {
+        alert("Not founded");
+      }
     } catch {
       alert("There was something wrong");
     }
@@ -56,64 +60,74 @@ function Form() {
           const username = e.target.elements.usernameInput.value;
           if (!username) {
             return alert("Please enter username");
+          } else if (username === undefined) {
+            return alert("User not founded");
           } else {
             getUser(username);
           }
         }}
       >
-        <div className="flex">
+        <div className="d-flex align-items-center justify-content-center">
           <input
             type="text"
             id="usernameInput"
             placeholder="Enter a username..."
           />
+          <button type="submit">Submit</button>
         </div>
-        <div className="card ">
-          <div className="data-container">
-            <div className="data-header">
-              <img className="m-3 rounded-circle" src={img} alt="logo" />
-              <div className="profile-name">
-                <p>{base.name}</p>
-                <p>{base.login}</p>
-                <p>{base.bio}</p>
-                <p>
-                  <i className="fas fa-envelope"></i>
-                  {base.email}
+        <div className="profile-container">
+          <div className="profile-content">
+            <div className="profile-header">
+              <img id="avatar" src={img} alt="" />
+              <div className="profile-info-wrapper">
+                <div className="profile-name">
+                  <h2 id="name">{base.name}</h2>
+                  <p id="user">{base.login}</p>
+                  <p className="email">
+                    <i className="fas fa-envelope"></i>
+                    {base.email}
+                  </p>
+                </div>
+                <p id="date"></p>
+              </div>
+            </div>
+
+            <div className="profile-stats-wrapper">
+              <div className="profile-stat">
+                <p className="stat-title">Repos</p>
+                <p id="repos" className="stat-value">
+                  {base.repos}
+                </p>
+              </div>
+              <div className="profile-stat">
+                <p className="stat-title">Followers</p>
+                <p id="followers" className="stat-value">
+                  {base.followers}
+                </p>
+              </div>
+              <div className="profile-stat">
+                <p className="stat-title">Following</p>
+                <p id="following" className="stat-value">
+                  {base.following}
                 </p>
               </div>
             </div>
-            <div className="profile-stats-container">
-              <div className="profile-stat">
-                <p>Repos</p>
-                <p>{base.repos}</p>
+            <div className="profile-bottom-wrapper">
+              <div className="profile-info">
+                <i className="fas fa-map-marker-alt"></i>
+                <p id="location">{base.location}</p>
               </div>
-              <div className="profile-stat">
-                <p>Followers</p>
-                <p>{base.followers}</p>
+              <div className="profile-info">
+                <i className="fas fa-link"></i>
+                <p id="page">{base.website}</p>
               </div>
-              <div className="profile-stat">
-                <p>Following</p>
-                <p>{base.following}</p>
+              <div className="profile-info">
+                <i className="fab fa-twitter"></i>
+                <p id="twitter">{base.twitter}</p>
               </div>
-            </div>
-            <div className="container">
-              <div className="row row-cols-2">
-                <p className="col">
-                  <i className="fas fa-map-marker-alt"></i>
-                  {base.location}
-                </p>
-                <p className="col">
-                  <i className="fab fa-twitter"></i>
-                  {base.twitter}
-                </p>
-                <p className="col">
-                  <i className="fas fa-link"></i>
-                  {base.website}
-                </p>
-                <p className="col">
-                  <i className="fas fa-building"></i>
-                  {base.company}
-                </p>
+              <div className="profile-info">
+                <i className="fas fa-building"></i>
+                <p id="company">{base.company}</p>
               </div>
             </div>
           </div>
