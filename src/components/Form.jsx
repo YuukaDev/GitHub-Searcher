@@ -47,7 +47,7 @@ function Form() {
   };
   useEffect(() => {
     getUser("YuukaDev");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className="container-fluid">
       <form
