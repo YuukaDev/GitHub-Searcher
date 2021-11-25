@@ -14,7 +14,10 @@ function Form() {
     bio: "",
     company: "",
     location: "",
-    website: "",
+    website: {
+      nameOf: "",
+      link: "",
+    },
     email: "",
     followers: 0,
     following: 0,
@@ -32,7 +35,10 @@ function Form() {
         bio: ` ${random.bio}`,
         company: ` ${handleNull(random.company, base.company)}`,
         location: ` ${handleNull(random.location, base.location)}`,
-        website: ` ${random.blog}`,
+        website: {
+          nameOf: ` ${random.blog}`,
+          //link: (window.location.href = random.blog),
+        },
         email: ` ${handleNull(random.email, base.email)}`,
         followers: `${random.followers}`,
         following: `${random.following}`,
@@ -113,7 +119,9 @@ function Form() {
               </div>
               <div className="profile-info">
                 <i className="fas fa-link"></i>
-                <p id="page">{base.website}</p>
+                <p id="page">
+                  <a href={base.website.link}>{base.website.nameOf}</a>
+                </p>
               </div>
               <div className="profile-info">
                 <i className="fab fa-twitter"></i>
