@@ -4,10 +4,10 @@ import Form from "./components/Form.jsx";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Form />
-    </div>
+    <main>
+        <Header />
+        <Form />
+    </main>
   );
 }
 
