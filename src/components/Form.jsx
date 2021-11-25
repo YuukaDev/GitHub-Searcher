@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import moment from "moment";
 
 function Form() {
   const handleNull = (a) => {
@@ -30,7 +31,9 @@ function Form() {
       setBase({
         name: `${handleNull(random.name, base.name)}`,
         login: `@${random.login}`,
-        creation: `${random.created_at}`,
+        creation: `${moment(random.created_at).format(
+          "[Joined] - ddd, MMMM Do YYYY"
+        )}`,
         bio: ` ${random.bio}`,
         company: ` ${handleNull(random.company, base.company)}`,
         location: ` ${handleNull(random.location, base.location)}`,
