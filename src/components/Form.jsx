@@ -12,12 +12,10 @@ function Form() {
     name: "",
     login: "",
     bio: "",
+    creation: "",
     company: "",
     location: "",
-    website: {
-      nameOf: "",
-      link: "",
-    },
+    website: "",
     email: "",
     followers: 0,
     following: 0,
@@ -32,13 +30,11 @@ function Form() {
       setBase({
         name: `${handleNull(random.name, base.name)}`,
         login: `@${random.login}`,
+        creation: `${random.created_at}`,
         bio: ` ${random.bio}`,
         company: ` ${handleNull(random.company, base.company)}`,
         location: ` ${handleNull(random.location, base.location)}`,
-        website: {
-          nameOf: ` ${random.blog}`,
-          //link: (window.location.href = random.blog),
-        },
+        website: ` ${random.blog}`,
         email: ` ${handleNull(random.email, base.email)}`,
         followers: `${random.followers}`,
         following: `${random.following}`,
@@ -88,7 +84,7 @@ function Form() {
                     {base.email}
                   </p>
                 </div>
-                <p id="date"></p>
+                <p id="date">{base.creation}</p>
               </div>
             </div>
 
@@ -119,9 +115,7 @@ function Form() {
               </div>
               <div className="profile-info">
                 <i className="fas fa-link"></i>
-                <p id="page">
-                  <a href={base.website.link}>{base.website.nameOf}</a>
-                </p>
+                <p id="page">{base.website}</p>
               </div>
               <div className="profile-info">
                 <i className="fab fa-twitter"></i>
