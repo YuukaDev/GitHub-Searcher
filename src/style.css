@@ -204,12 +204,14 @@ button:hover {
   }
 
   .profile-stats-wrapper {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-75%, 120%);
-    width: 20%;
+    transform: translate(-50%, 100%);
+    width: 90%;
     margin: 0 auto;
   }
 
