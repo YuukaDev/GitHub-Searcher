@@ -182,7 +182,7 @@ button:hover {
   }
   .profile-container {
     min-height: 100vh;
-    min-width: 100%;
+    width: 100%;
     margin-top: 24px;
   }
   .profile-content {
@@ -203,22 +203,32 @@ button:hover {
     font-size: 16px;
   }
 
+  .profile-stats-wrapper {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-75%, 120%);
+    width: 20%;
+    margin: 0 auto;
+  }
+
   .profile-stat {
-    width: 50%;
-    text-align: start;
-    justify-content: center;
+    margin: 0 auto;
+    text-align: left;
+    justify-content: left;
   }
   .stat-title {
     font-size: 10px;
   }
 
   .stat-value {
-    font-size: 10px;
+    font-size: 15px;
   }
   .profile-bottom-wrapper {
     flex-direction: row;
     flex-flow: column wrap;
     justify-content: space-between;
-    max-height: 100px;
+    max-height: 100%;
   }
 }
