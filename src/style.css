@@ -67,11 +67,10 @@ button:hover {
   box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
 }
 .profile-content {
-  max-width: 480px;
+  width: 480px;
   margin-left: 200px;
   height: 350px;
-  max-height: 400px;
-  width: 493px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -175,4 +174,51 @@ button:hover {
 
 .profile-info p {
   margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding-top: 90px;
+  }
+  .profile-container {
+    min-height: 100vh;
+    min-width: 100%;
+    margin-top: 24px;
+  }
+  .profile-content {
+    min-width: 500px;
+  }
+  #avatar {
+    width: 117px;
+    height: 117px;
+  }
+  .profile-info-wrapper {
+    min-height: 117px;
+    justify-content: center;
+  }
+  #name {
+    font-size: 26px;
+  }
+  #user {
+    font-size: 16px;
+  }
+
+  .profile-stat {
+    width: 50%;
+    text-align: start;
+    justify-content: center;
+  }
+  .stat-title {
+    font-size: 10px;
+  }
+
+  .stat-value {
+    font-size: 10px;
+  }
+  .profile-bottom-wrapper {
+    flex-direction: row;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    max-height: 100px;
+  }
 }
