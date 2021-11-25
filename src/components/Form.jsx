@@ -56,7 +56,7 @@ function Form() {
   return (
     <div className="container-fluid">
       <form
-        autocomplete="off"
+        autoComplete="off"
         onSubmit={(e) => {
           e.preventDefault();
           const username = e.target.elements.usernameInput.value;
