@@ -182,7 +182,7 @@ button:hover {
   }
   .profile-container {
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 75vh;
     width: 100%;
     margin-top: 24px;
   }
@@ -190,12 +190,12 @@ button:hover {
     min-width: 500px;
   }
   #avatar {
-    margin-top: -140px;
+    margin-top: -60px;
     width: 117px;
     height: 117px;
   }
   .profile-info-wrapper {
-    margin-top: -140px;
+    margin-top: -60px;
   }
   #name {
     font-size: 26px;
@@ -205,9 +205,6 @@ button:hover {
   }
 
   .profile-stats-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -228,6 +225,12 @@ button:hover {
     font-size: 25px;
   }
   .profile-bottom-wrapper {
-    display: none;
+    display: block;
+    position: relative;
+    top: 5%;
+    right: 70%;
+    margin: 0 auto;
+    font-size: 1.3em;
+    margin-bottom: 5px;
   }
 }
