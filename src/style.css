@@ -111,6 +111,13 @@ button:hover {
   color: #0079ff;
 }
 
+#date {
+  left: 57.5%;
+  top: 20%;
+  position: absolute;
+  color: #0079ff;
+}
+
 .email {
   font-size: 1.2em;
   color: #fffb85;
