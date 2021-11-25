@@ -189,12 +189,12 @@ button:hover {
     min-width: 500px;
   }
   #avatar {
+    margin-top: -60px;
     width: 117px;
     height: 117px;
   }
   .profile-info-wrapper {
-    min-height: 117px;
-    justify-content: center;
+    margin-top: -60px;
   }
   #name {
     font-size: 26px;
@@ -226,9 +226,8 @@ button:hover {
     font-size: 15px;
   }
   .profile-bottom-wrapper {
-    flex-direction: row;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
