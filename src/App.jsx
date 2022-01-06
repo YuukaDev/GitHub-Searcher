@@ -5,8 +5,8 @@ import Form from "./components/Form.jsx";
 function App() {
   return (
     <main>
-        <Header />
-        <Form />
+      <Header />
+      <Form />
     </main>
   );
 }
