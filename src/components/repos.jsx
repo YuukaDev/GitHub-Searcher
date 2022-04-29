@@ -16,7 +16,7 @@ export default function Repos() {
     getUser("YuukaDev");
   }, []);
 
-  const [base, setBase] = useState(null);
+  const [base, setBase] = useState([]);
   return (
     <>
       <h1>Repository</h1>
